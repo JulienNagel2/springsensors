@@ -45,7 +45,7 @@ public class DemoController {
         return new HashMap<>();
     }
 
-    private static final String REPLACEMENT_BANNER_TEXT="Spring Sensors by JNG v3.2";
+    private static final String REPLACEMENT_BANNER_TEXT="Spring Sensors by JNG v3.3";
 
     @RequestMapping("/refresh")
     public @ResponseBody SensorData refresh() {
