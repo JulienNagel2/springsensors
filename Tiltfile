@@ -1,12 +1,12 @@
 allow_k8s_contexts('cltest2')
 
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='jngacr3.azurecr.io/vsc/imgss')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='jngacr3.azurecr.io/tap1.1.0/si/spring-sensors')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='/Users/jnagel/jng/app/ztestsjng/tests_TAP/w1/spring-sensors')
-NAMESPACE = os.getenv("NAMESPACE", default='jngnsvsc1')
+NAMESPACE = os.getenv("NAMESPACE", default='envt-dev')
 
-SOURCE_IMAGE = 'jngacr3.azurecr.io/vsc/imgss'
+SOURCE_IMAGE = 'jngacr3.azurecr.io/tap1.1.0/appsrcs/spring-sensors'
 LOCAL_PATH = '/Users/jnagel/jng/app/ztestsjng/tests_TAP/w1/spring-sensors'
-NAMESPACE = 'jngnsvsc1'
+NAMESPACE = 'envt-dev'
 
 k8s_custom_deploy(
     'spring-sensors',
