@@ -34,7 +34,7 @@ public class DemoController {
     public String home(Model model) throws SQLException {
         Connection connection = Objects.requireNonNull(_jdbcTemplate.getDataSource()).getConnection();
         model.addAttribute("sensorDB", "Sensor DB: " + connection.getMetaData().getURL());
-        System.out.println("I have been there v2.0.0");
+        System.out.println("I have been there v2.0.1");
         connection.close();
         return "index";
     }
@@ -46,7 +46,7 @@ public class DemoController {
         return new HashMap<>();
     }
 
-    private static final String REPLACEMENT_BANNER_TEXT="Spring Sensors by JNG v2.0.0";
+    private static final String REPLACEMENT_BANNER_TEXT="Spring Sensors by JNG v2.0.1";
 
     @RequestMapping("/refresh")
     public @ResponseBody SensorData refresh() {
